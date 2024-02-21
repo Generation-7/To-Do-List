@@ -1,6 +1,6 @@
 # ToDo List:📝
 <br>
-![ToDo List](https://media.discordapp.net/attachments/1184087185658482699/1209583156504690718/Screenshot_2024-02-20_230127.png?ex=65e77319&is=65d4fe19&hm=8b12d448049374da257a33025a249aa4c967b5dc8d8f993b03bc8b02a9d7f772&=&format=webp&quality=lossless&width=787&height=473)
+![To-Do-List-Preview](https://github.com/Generation-7/To-Do-List/assets/143057362/ad2fc6cd-fc58-4072-a590-ab1b2ac114ad)
 <br>
 
 ### What is To Do List? 
