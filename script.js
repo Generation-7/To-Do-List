@@ -30,6 +30,18 @@ listContainer.addEventListener(
 );
 function saveData() {
   localStorage.setItem("data", listContainer.innerHTML);
+  let taskElements = listContainer.children;
+  let tasks = [];
+  for (let index = 0; index < taskElements.length; index++) {
+    const taskElement = taskElements[index];
+    const taskObject = {
+      id: index,
+      value: taskElement.innerText.trim(),
+      checked: taskElement.classList.contains("checked"),
+    };
+    tasks.push(taskObject);
+  }
+  localStorage.setItem("data", JSON.stringify(tasks));
 }
 function showTask() {
   listContainer.innerHTML = localStorage.getItem("data");
