@@ -29,22 +29,45 @@ listContainer.addEventListener(
   false
 );
 function saveData() {
-  localStorage.setItem("data", listContainer.innerHTML);
   let taskElements = listContainer.children;
   let tasks = [];
+
   for (let index = 0; index < taskElements.length; index++) {
     const taskElement = taskElements[index];
+
     const taskObject = {
       id: index,
-      value: taskElement.innerText.trim(),
+      value: taskElement.firstChild.nodeValue.trim(),
       checked: taskElement.classList.contains("checked"),
     };
+
     tasks.push(taskObject);
   }
+
   localStorage.setItem("data", JSON.stringify(tasks));
 }
+
 function showTask() {
-  listContainer.innerHTML = localStorage.getItem("data");
+  let storedData = localStorage.getItem("data");
+
+  if (storedData) {
+    let tasks = JSON.parse(storedData);
+
+    tasks.forEach((task) => {
+      let li = document.createElement("li");
+      li.innerText = task.value;
+
+      if (task.checked) {
+        li.classList.add("checked");
+      }
+
+      let span = document.createElement("span");
+      span.innerText = "\u00d7";
+
+      li.appendChild(span);
+      listContainer.appendChild(li);
+    });
+  }
 }
 
 // Add event listener for "Enter" key press
