@@ -1,7 +1,7 @@
 # ToDo List:📝
-<br>
+
 ![To-Do-List-Preview](https://github.com/Generation-7/To-Do-List/assets/143057362/ad2fc6cd-fc58-4072-a590-ab1b2ac114ad)
-<br>
+
 
 ### What is To Do List? 
 
